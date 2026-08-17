@@ -1,0 +1,51 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  /** which page is showing, so the "View Online" link can point home when already on the resume */
+  current?: 'home' | 'resume';
+}
+const { current = 'home' } = Astro.props;
+---
+
+<header class="hdr wrap">
+  <a class="brand" href="/">
+    <span class="bname">{site.name}</span>
+    <span class="brole">{site.role} <i>•</i> {site.location}</span>
+  </a>
+
+  <div class="resume-box" aria-label="Resume">
+    <span class="rb-title">Resume</span>
+    <span class="rb-links">
+      <a href={site.resumePdf} download>Download</a>
+      <i>•</i>
+      {current === 'resume'
+        ? <a href="/" title="Back to selected work">Back to Work</a>
+        : <a href="/resume/">View Online</a>}
+    </span>
+  </div>
+</header>
+
+<style>
+  .hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-top:44px;padding-bottom:26px;border-bottom:1px solid var(--line-soft)}
+  .brand{display:flex;flex-direction:column;gap:6px}
+  .bname{font-family:var(--font-display);font-weight:700;font-size:21px;line-height:1;letter-spacing:.005em}
+  .brole{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);font-weight:500}
+  .brole i{font-style:normal;margin:0 8px;position:relative;top:-1px}
+
+  .resume-box{border:1px solid var(--accent);padding:12px 22px 11px;text-align:center;line-height:1.3;min-width:150px}
+  .rb-title{display:block;font-weight:600;font-size:12px;letter-spacing:.02em}
+  .rb-links{display:block;font-size:9px;letter-spacing:.06em;color:var(--ink)}
+  .rb-links a{padding:2px 0;transition:color .15s}
+  .rb-links a:hover{color:var(--accent)}
+  .rb-links i{font-style:normal;margin:0 6px}
+
+  @media (max-width:560px){
+    .hdr{padding-top:28px;align-items:center;gap:16px}
+    .brole{letter-spacing:.16em;font-size:9px}
+    .brole i{margin:0 5px}
+    .resume-box{padding:9px 12px 8px;min-width:0;white-space:nowrap}
+    .rb-links{letter-spacing:.02em}
+    .rb-links i{margin:0 4px}
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+const tel = site.phone.replace(/\s+/g, '');
+---
+
+<footer class="ftr wrap">
+  <p>
+    ©{site.year}, <a href={`mailto:${site.email}`}>{site.email}</a>
+    <span class="dot">·</span>
+    <a href={`tel:${tel}`}>{site.phone}</a>
+  </p>
+</footer>
+
+<style>
+  .ftr{text-align:center;padding-top:clamp(56px,8vw,110px);padding-bottom:clamp(40px,5vw,64px)}
+  .ftr p{font-size:11px;letter-spacing:.24em;text-transform:lowercase;color:var(--accent);font-weight:500}
+  .ftr a:hover{text-decoration:underline;text-underline-offset:4px}
+  .dot{margin:0 8px}
+  @media (max-width:560px){.ftr p{letter-spacing:.12em;line-height:2}}
+</style>

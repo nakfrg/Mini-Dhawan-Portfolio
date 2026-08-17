@@ -1,0 +1,35 @@
+{
+  "order": 3,
+  "title": "AMSA annual report",
+  "category": "print",
+  "client": "AMSA",
+  "caption": "AMSA annual report",
+  "year": "2022",
+  "role": "Studio manager",
+  "deliverables": [
+    "Annual report",
+    "Infographics"
+  ],
+  "image": "/images/work/amsa-annual-report/cover.png",
+  "hero": "/images/work/amsa-annual-report/hero.png",
+  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget felis at magna vestibulum finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+  "body": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio in nulla efficitur pellentesque. Praesent vitae sapien a purus lacinia commodo, sit amet feugiat mauris ultricies. Sed euismod, lorem sed convallis tristique, felis mi tincidunt lectus, sit amet ornare quam massa non urna.",
+    "Curabitur non lorem eu magna sollicitudin gravida. Vivamus ac ipsum aliquet, aliquam mauris nec, viverra risus. Aenean id turpis a nisl vulputate iaculis. Nulla facilisi. Donec sit amet dolor id lectus fermentum egestas vitae ut ligula.",
+    "Suspendisse potenti. Phasellus vel enim luctus, imperdiet lorem in, faucibus felis. Morbi consequat, justo eu tincidunt sodales, urna nunc placerat quam, at gravida augue mi et sem. Fusce hendrerit lacus a magna dictum, ut porta felis dapibus."
+  ],
+  "gallery": [
+    {
+      "src": "/images/work/amsa-annual-report/01.png",
+      "caption": "Lorem ipsum caption 1"
+    },
+    {
+      "src": "/images/work/amsa-annual-report/02.png",
+      "caption": "Lorem ipsum caption 2"
+    },
+    {
+      "src": "/images/work/amsa-annual-report/03.png",
+      "caption": "Lorem ipsum caption 3"
+    }
+  ]
+}
